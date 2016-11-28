@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta name="robots" content="index, follow"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>Journey to the frontend world | Irfan Maulana</title>
+
+        <meta name="language" content="id-ID"/>
+        <meta name="author" content="Irfan Maulana"/>
+</head>
+<body>
+
+  <header role="header" id="header">
+    <h1>Journey to the frontend world</h1>
+	<h2>Part 1: The Skeleton</h2>
+  </header>
+
+  <main role="main" id="main">
+	<section>
+		<h3>This is table with static data</h3>	
+	
+		<button>Add New Data</button>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>No.</th>
+					<th>Name</th>
+					<th>Gender</th>
+					<th>Email</th>
+					<th>Address</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Irfan</td>
+					<td>Male</td>
+					<td>mazipanneh@gmail.com</td>
+					<td>Kemayoran</td>
+					<td>
+						<button>Edit</button>
+						<button>Delete</button>
+					</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Irfan</td>
+					<td>Male</td>
+					<td>mazipanneh@gmail.com</td>
+					<td>Kemayoran</td>
+					<td>
+						<button>Edit</button>
+						<button>Delete</button>
+					</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Irfan</td>
+					<td>Male</td>
+					<td>mazipanneh@gmail.com</td>
+					<td>Kemayoran</td>
+					<td>
+						<button>Edit</button>
+						<button>Delete</button>
+					</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Irfan</td>
+					<td>Male</td>
+					<td>mazipanneh@gmail.com</td>
+					<td>Kemayoran</td>
+					<td>
+						<button class="button button--blue">Edit</button>
+						<button class="button button--blue">Delete</button>
+					</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Irfan</td>
+					<td>Male</td>
+					<td>mazipanneh@gmail.com</td>
+					<td>Kemayoran</td>
+					<td>
+						<button class="button button--blue">Edit</button>
+						<button class="button button--blue">Delete</button>
+					</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>Irfan</td>
+					<td>Male</td>
+					<td>mazipanneh@gmail.com</td>
+					<td>Kemayoran</td>
+					<td>
+						<button class="button button--blue">Edit</button>
+						<button class="button button--blue">Delete</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>	
+	</section>
+	<section>
+		<h3>This is our form input data</h3>
+		<form validate="validate">
+			<fieldset>
+				<div>				
+					<label for="input-name">Name :</label>
+					<input type="text" id="input-name" required="true"/>
+				</div>	
+				
+				<div>				
+					<label>Gender :</label>				
+					<input type="radio" id="input-gender-1" name="input-gender" checked="true"/>
+					<label for="input-gender-1">Male</label>	
+					<input type="radio" id="input-gender-2" name="input-gender"/>
+					<label for="input-gender-2">Female</label>	
+				</div>					
+				
+				<div>				
+					<label for="input-email">Email :</label>
+					<input type="email" id="input-email" required="true"/>
+				</div>	
+				
+				<div>				
+					<label for="input-address" >Address :</label>
+					<textarea id="input-address" rows="3" required="true"></textarea>
+				</div>	
+				
+				<div>				
+					<input type="submit" id="input-save" value="Save Data"/>
+					<button id="input-cancel">Cancel</button>
+				</div>		
+				
+			</fieldset>
+		<form>
+	</section>
+	
+  </main>
+
+  <footer role="footer" id="footer">
+	<span>Copyright © 2016</span>
+  </footer>
+
+</body>
+</html>
