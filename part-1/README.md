@@ -4,8 +4,5 @@ We learn about basic knowledge in HTML, a standard in HTML and functions of each
 In the end of this part we will build some table and form for our last study case without CSS and Javascript, just HTML structure.
 This task will continue in the next part until last part.
 
-<h3>Module</h3>
-- Part 1 : The Skeleton
-- Part 2 : The Cosmetic
-- Part 3 : The Machine
-- Part 4 : The Baby
+  + Slide : <a href="http://www.slideshare.net/IrfanMaulana21/journey-to-the-front-end-world-part1-the-skeleton">http://www.slideshare.net/IrfanMaulana21/journey-to-the-front-end-world-part1-the-skeleton</a>
+  + Demo Page : <a href="https://mazipan.github.io/demo/journey-to-the-frontend-world/part-1/index.html">https://mazipan.github.io/demo/journey-to-the-frontend-world/part-1/index.html</a>
