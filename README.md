@@ -4,13 +4,13 @@ Here I will seperate into 4 part that in every part we will learn about one enti
 In the end of part we will build a real combination from our three first entity that we learned before.
 
 <h3>Demo</h3>
-<a href="https://mazipan.github.io/demo/journey-to-the-frontend-world/">https://mazipan.github.io/demo/journey-to-the-frontend-world/</a>
+<a href="https://mazipan.github.io/journey-to-the-frontend-world/">https://mazipan.github.io/journey-to-the-frontend-world/</a>
 
 <h3>Module</h3>
 - Part 1 : The Skeleton
   + Description : This part will introduce newbies about basic HTML
   + Slide : <a href="http://www.slideshare.net/IrfanMaulana21/journey-to-the-front-end-world-part1-the-skeleton">http://www.slideshare.net/IrfanMaulana21/journey-to-the-front-end-world-part1-the-skeleton</a>
-  + Demo Page : <a href="https://mazipan.github.io/journey-to-the-frontend-world/">https://mazipan.github.io/journey-to-the-frontend-world/</a>
+  + Demo Page : <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-1/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-1/index.html</a>
 - Part 2 : The Cosmetic
   + Description : under development
   + Slide : under development
