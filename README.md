@@ -15,6 +15,7 @@ In the end of part we will build a real combination from our three first entity 
   + Description : This part will introduce newbies about basic CSS
   + Slide : under development
   + Demo Page : 
+  <br/>
   <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-2/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-2/index.html</a>
   <br/>
   <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-2/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-2/index-with-framework.html</a>
