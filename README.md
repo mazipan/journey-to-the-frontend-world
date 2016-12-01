@@ -10,7 +10,7 @@ In the end of part we will build a real combination from our three first entity 
 - Part 1 : The Skeleton
   + Description : This part will introduce newbies about basic HTML
   + Slide : <a href="http://www.slideshare.net/IrfanMaulana21/journey-to-the-front-end-world-part1-the-skeleton">http://www.slideshare.net/IrfanMaulana21/journey-to-the-front-end-world-part1-the-skeleton</a>
-  + Demo Page : <a href="https://mazipan.github.io/demo/journey-to-the-frontend-world/part-1/index.html">https://mazipan.github.io/demo/journey-to-the-frontend-world/part-1/index.html</a>
+  + Demo Page : <a href="https://mazipan.github.io/journey-to-the-frontend-world/">https://mazipan.github.io/journey-to-the-frontend-world/</a>
 - Part 2 : The Cosmetic
   + Description : under development
   + Slide : under development
