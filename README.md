@@ -12,17 +12,20 @@ In the end of part we will build a real combination from our three first entity 
   + Slide : <a href="http://www.slideshare.net/IrfanMaulana21/journey-to-the-front-end-world-part1-the-skeleton">http://www.slideshare.net/IrfanMaulana21/journey-to-the-front-end-world-part1-the-skeleton</a>
   + Demo Page : <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-1/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-1/index.html</a>
 - Part 2 : The Cosmetic
-  + Description : under development
+  + Description : This part will introduce newbies about basic CSS
   + Slide : under development
-  + Demo Page : under development
+  + Demo Page : 
+  <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-2/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-2/index.html</a>
+  <br/>
+  <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-2/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-2/index-with-framework.html</a>
 - Part 3 : The Machine
-  + Description : under development
+  + Description : This part will introduce newbies about basic Javascript
   + Slide : under development
-  + Demo Page : under development
+  + Demo Page : <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-3/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-3/index.html</a>
 - Part 4 : The Baby
   + Description : under development
   + Slide : under development
-  + Demo Page : under development
+  + Demo Page : <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-4/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-4/index.html</a>
 
 
 </br>
