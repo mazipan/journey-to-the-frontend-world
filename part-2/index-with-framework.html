@@ -131,20 +131,19 @@
 			<h3>This is our form input data</h3>
 			<form validate="validate">
 				<fieldset>
-					<div class="grid__row">		
-						<div class="grid__col-2">
+
+					<div class="form__group">		
+						<div class="form__label">
 							<label for="input-name">Name :</label>
 						</div>		
-						<div class="grid__col-7">
-							<input type="text" id="input-name" required="true" class="textfield" />
-						</div>	
+						<input type="text" id="input-name" required="true" class="textfield" />
 					</div>	
 					
-					<div class="grid__row">		
-						<div class="grid__col-2">
+					<div class="form__group">		
+						<div class="form__label">
 							<label>Gender :</label>	
 						</div>		
-						<div class="grid__col-7">
+						<div class="form__wrapper">
 							<input type="radio" id="input-gender-1" name="input-gender" checked="true" class="radio radio--blue" />
 							<label for="input-gender-1">Male</label>	
 							<input type="radio" id="input-gender-2" name="input-gender" class="radio radio--blue" />
@@ -152,34 +151,28 @@
 						</div>						
 					</div>					
 					
-					<div class="grid__row">	
-						<div class="grid__col-2">
+					<div class="form__group">	
+						<div class="form__label">
 							<label for="input-email">Email :</label>
 						</div>		
-						<div class="grid__col-7">
-							<input type="email" id="input-email" required="true" class="textfield" />
-						</div>				
+						<input type="email" id="input-email" required="true" class="textfield" />
 					</div class="grid__row">	
 					
-					<div class="grid__row">
-						<div class="grid__col-2">
+					<div class="form__group">
+						<div class="form__label">
 							<label for="input-address" >Address :</label>
 						</div>		
-						<div class="grid__col-7">
-							<textarea id="input-address" rows="3" required="true" class="textfield"></textarea>
-						</div>					
+						<textarea id="input-address" rows="3" required="true" class="textfield"></textarea>
 					</div>	
 					
-					<div class="grid__row">		
-						<div class="grid__col-2">
-							&nbsp;
-						</div>		
+					<div class="form__group">
+						<div class="form__label"></div>			
 						<div class="grid__col-7">
 							<input type="submit" id="input-save" value="Save Data" class="button button--blue" />
 							<button id="input-cancel" class="button button--blue">Cancel</button>
-						</div>				
+						</div>	
 					</div>		
-					
+									
 				</fieldset>
 			<form>
 		</div>			
