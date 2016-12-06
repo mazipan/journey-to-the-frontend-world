@@ -58,6 +58,7 @@
 .header__brand img
 {
     height: 45px;
+    border-radius: .25em;
 }
 
 /*
