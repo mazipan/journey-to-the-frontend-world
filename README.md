@@ -7,11 +7,11 @@ In the end of part we will build a real combination from our three first entity 
 <a href="https://mazipan.github.io/journey-to-the-frontend-world/">https://mazipan.github.io/journey-to-the-frontend-world/</a>
 
 <h3>Module</h3>
-- Part 1 : The Skeleton
+- <b>Part 1 : The Skeleton</b>
   + Description : This part will introduce newbies about basic HTML
   + Slide : <a href="http://www.slideshare.net/IrfanMaulana21/journey-to-the-front-end-world-part1-the-skeleton">http://www.slideshare.net/IrfanMaulana21/journey-to-the-front-end-world-part1-the-skeleton</a>
   + Demo Page : <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-1/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-1/index.html</a>
-- Part 2 : The Cosmetic
+- <b>Part 2 : The Cosmetic</b>
   + Description : This part will introduce newbies about basic CSS
   + Slide : <a href="http://www.slideshare.net/IrfanMaulana21/journey-to-the-front-end-world-part2-the-cosmetic">http://www.slideshare.net/IrfanMaulana21/journey-to-the-front-end-world-part2-the-cosmetic</a>
   + Demo Page : 
@@ -19,11 +19,11 @@ In the end of part we will build a real combination from our three first entity 
   <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-2/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-2/index.html</a>
   <br/>
   <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-2/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-2/index-with-framework.html</a>
-- Part 3 : The Machine
+- <b>Part 3 : The Machine</b>
   + Description : This part will introduce newbies about basic Javascript
   + Slide : under development
   + Demo Page : <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-3/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-3/index.html</a>
-- Part 4 : The Baby
+- <b>Part 4 : The Baby</b>
   + Description : under development
   + Slide : under development
   + Demo Page : <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-4/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-4/index.html</a>
