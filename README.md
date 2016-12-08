@@ -13,7 +13,7 @@ In the end of part we will build a real combination from our three first entity 
   + Demo Page : <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-1/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-1/index.html</a>
 - Part 2 : The Cosmetic
   + Description : This part will introduce newbies about basic CSS
-  + Slide : under development
+  + Slide : <a href="http://www.slideshare.net/IrfanMaulana21/journey-to-the-front-end-world-part2-the-cosmetic">http://www.slideshare.net/IrfanMaulana21/journey-to-the-front-end-world-part2-the-cosmetic</a>
   + Demo Page : 
   <br/>
   <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-2/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-2/index.html</a>
