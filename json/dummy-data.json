@@ -1,0 +1,28 @@
+{
+	"errorMessage": "",
+	"errorCode": "",
+	"result": true,
+	"resultData": {
+		"total": 100,
+		"page": 1,
+		"data": [{
+			"id": "dummy-id-1",
+			"name": "Irfan Maulana",
+			"gender": 1,
+			"email": "mazipanneh@gmail.com",
+			"address": "Kemayoran"
+		}, {
+			"id": "dummy-id-2",
+			"name": "Irfan Maulana",
+			"gender": 1,
+			"email": "mazipanneh@gmail.com",
+			"address": "Kemayoran"
+		}, {
+			"id": "dummy-id-3",
+			"name": "Irfan Maulana",
+			"gender": 1,
+			"email": "mazipanneh@gmail.com",
+			"address": "Kemayoran"
+		}]
+	}
+}
