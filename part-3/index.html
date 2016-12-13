@@ -40,7 +40,7 @@
 		<div class="grid__row">
 			<div class="main__top-block">
 				<h3>This is table with static data</h3>		
-				<button class="button button--radius button--blue">Add New Data</button>				
+				<button class="button button--radius button--blue" onclick="CRUD_ACTION.showFormEditing()">Add New Data</button>				
 			</div>
 
 			<table class="table">
@@ -126,10 +126,10 @@
 		</div>	
 	</section>
 
-	<section class="main__section">	
+	<section class="main__section form__section">	
 		<div class="grid__row">
 			<h3>This is our form input data</h3>
-			<form validate="validate">
+			<form validate="validate" onsubmit="CRUD_ACTION.doSubmitFunction(event)">
 				<fieldset>
 
 					<div class="form__group">		
@@ -168,8 +168,17 @@
 					<div class="form__group">
 						<div class="form__label"></div>			
 						<div class="grid__col-16">
-							<input type="submit" id="input-save" value="Save Data" class="button button--radius button--blue" />
-							<button id="input-cancel" class="button button--radius button--blue">Cancel</button>
+							<input  type="submit" 
+									id="input-save" 
+									value="Save Data" 
+									class="button button--radius button--blue" />
+
+							<a  id="input-cancel" 
+								href="javascript:void(0)" 
+								class="button button--radius button--blue" onclick="CRUD_ACTION.hideFormEditing()">
+								Cancel
+							</a>
+
 						</div>	
 					</div>		
 
