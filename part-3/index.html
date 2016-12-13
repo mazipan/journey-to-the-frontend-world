@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta name="robots" content="index, follow"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>Journey to the frontend world | Irfan Maulana</title>
+
+        <meta name="language" content="id-ID"/>
+        <meta name="author" content="Irfan Maulana"/>
+
+        <link rel="stylesheet" type="text/css" href="https://mazipan.github.io/awesome-bemcss/dist/awesome-bemcss.min.css">
+        <link rel="stylesheet" type="text/css" href="../part2/style.css">
+</head>
+<body class="site">
+
+  <header role="header" id="header" class="site__header header">
+	  	<div class="header__wrapper">
+		  	<div class="header__brand">	          
+	          <a href="../">
+	            <img src="https://mazipan.github.io/images/irfan-maulana.jpg" alt="Irfan Maulana" title="Irfan Maulana"/>
+	          </a>
+	        </div>
+    	</div>
+  </header>
+
+  <main role="main" id="main" class="site__main main">
+
+	<section class="main__section">	
+		<div class="grid__row">			
+			<h1>Journey to the frontend world</h1>
+			<h2>Part 2: The Cosmetic</h2>
+			<h3>Using External CSS Framework</h3>
+			<a href="../">Lihat semua</a>
+		</div>	
+	</section>
+
+	<section class="main__section">	
+		<div class="grid__row">
+			<div class="main__top-block">
+				<h3>This is table with static data</h3>		
+				<button class="button button--radius button--blue">Add New Data</button>				
+			</div>
+
+			<table class="table">
+				<thead class="table__head">
+					<tr>
+						<th>No.</th>
+						<th>Name</th>
+						<th>Gender</th>
+						<th>Email</th>
+						<th>Address</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody class="table__body">
+					<tr>
+						<td>1</td>
+						<td>Irfan</td>
+						<td>Male</td>
+						<td>mazipanneh@gmail.com</td>
+						<td>Kemayoran</td>
+						<td>
+							<button class="button button--radius button--blue">Edit</button>
+							<button class="button button--radius button--blue">Delete</button>
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Irfan</td>
+						<td>Male</td>
+						<td>mazipanneh@gmail.com</td>
+						<td>Kemayoran</td>
+						<td>
+							<button class="button button--radius button--blue">Edit</button>
+							<button class="button button--radius button--blue">Delete</button>
+						</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Irfan</td>
+						<td>Male</td>
+						<td>mazipanneh@gmail.com</td>
+						<td>Kemayoran</td>
+						<td>
+							<button class="button button--radius button--blue">Edit</button>
+							<button class="button button--radius button--blue">Delete</button>
+						</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Irfan</td>
+						<td>Male</td>
+						<td>mazipanneh@gmail.com</td>
+						<td>Kemayoran</td>
+						<td>
+							<button class="button button--radius button--blue">Edit</button>
+							<button class="button button--radius button--blue">Delete</button>
+						</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>Irfan</td>
+						<td>Male</td>
+						<td>mazipanneh@gmail.com</td>
+						<td>Kemayoran</td>
+						<td>
+							<button class="button button--radius button--blue">Edit</button>
+							<button class="button button--radius button--blue">Delete</button>
+						</td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>Irfan</td>
+						<td>Male</td>
+						<td>mazipanneh@gmail.com</td>
+						<td>Kemayoran</td>
+						<td>
+							<button class="button button--radius button--blue">Edit</button>
+							<button class="button button--radius button--blue">Delete</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>	
+		</div>	
+	</section>
+
+	<section class="main__section">	
+		<div class="grid__row">
+			<h3>This is our form input data</h3>
+			<form validate="validate">
+				<fieldset>
+
+					<div class="form__group">		
+						<div class="form__label">
+							<label for="input-name">Name :</label>
+						</div>		
+						<input type="text" id="input-name" required="true" class="textfield" />
+					</div>	
+					
+					<div class="form__group">		
+						<div class="form__label">
+							<label>Gender :</label>	
+						</div>		
+						<div class="form__wrapper">
+							<input type="radio" id="input-gender-1" name="input-gender" checked="true" class="radio radio--blue" />
+							<label for="input-gender-1">Male</label>	
+							<input type="radio" id="input-gender-2" name="input-gender" class="radio radio--blue" />
+							<label for="input-gender-2">Female</label>	
+						</div>						
+					</div>					
+					
+					<div class="form__group">	
+						<div class="form__label">
+							<label for="input-email">Email :</label>
+						</div>		
+						<input type="email" id="input-email" required="true" class="textfield" />
+					</div class="grid__row">	
+					
+					<div class="form__group">
+						<div class="form__label">
+							<label for="input-address" >Address :</label>
+						</div>		
+						<textarea id="input-address" rows="3" required="true" class="textfield"></textarea>
+					</div>	
+					
+					<div class="form__group">
+						<div class="form__label"></div>			
+						<div class="grid__col-16">
+							<input type="submit" id="input-save" value="Save Data" class="button button--radius button--blue" />
+							<button id="input-cancel" class="button button--radius button--blue">Cancel</button>
+						</div>	
+					</div>		
+
+				</fieldset>
+			<form>
+		</div>			
+	</section>
+	
+  </main>
+
+  <footer role="footer" class="site__footer footer" id="footer">
+    <div class="footer__wrapper">
+
+      <div class="footer__text">
+        <span>Crafted with &nbsp;<i class="fa fa-heart-o"></i>&nbsp; by Irfan Maulana</span>
+      </div>
+
+      <ul class="footer__list">
+        <li class="footer__icon">
+          <a rel="nofollow" href="https://www.facebook.com/mazipanneh">
+            <i class="fa fa-facebook-square"></i>
+          </a>
+        </li>
+        <li class="footer__icon">
+          <a rel="nofollow" href="https://twitter.com/Maz_Ipan">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </li>
+        <li class="footer__icon">
+          <a rel="nofollow" href="https://instagram.com/maz_ipan">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </li>
+        <li class="footer__icon">
+          <a rel="nofollow" href="https://id.linkedin.com/in/irfanmaulanamazipan">
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </li>
+        <li class="footer__icon">
+          <a rel="nofollow" href="https://www.slideshare.net/IrfanMaulana21">
+            <i class="fa fa-slideshare"></i>
+          </a>
+        </li>
+        <li class="footer__icon">
+          <a rel="nofollow" href="https://github.com/mazipan">
+            <i class="fa fa-github"></i>
+          </a>
+        </li>
+        <li class="footer__icon">
+          <a rel="nofollow" href="https://mazipanneh.wordpress.com/">
+            <i class="fa fa-wordpress"></i>
+          </a>
+        </li>
+      </ul>
+
+      <div class="footer__text">
+        <span>Copyright © 2016</span>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
