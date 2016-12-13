@@ -1,20 +1,149 @@
-var isEditingState = false;
-
 var CRUD_ACTION = {
-	getStateView: function(){
-		return isEditingState;
+	datas: [],
+	dataEdited: {},
+	isEditingState: false,
+	// GETTER - SETTER
+	getDatas: function(){
+		return CRUD_ACTION.datas;
 	},
+	setDatas: function(datas){
+		return CRUD_ACTION.datas = datas;
+	},
+	getDataEdited: function(){
+		return CRUD_ACTION.dataEdited;
+	},
+	setDataEdited: function(dataEdited){
+		return CRUD_ACTION.dataEdited = dataEdited;
+	},
+	getStateView: function(){
+		return CRUD_ACTION.isEditingState;
+	},
+	setStateView: function(isEditingState){
+		return CRUD_ACTION.isEditingState = isEditingState;
+	},
+	// UI INTERACTION
 	showFormEditing: function(){
-		isEditingState = true;
+		CRUD_ACTION.setStateView(true);
+		CRUD_ACTION.resetFormEditing();
+
+		$('.table').hide();
 		$('.form__section').show();
 	},
 	hideFormEditing: function(){
-		isEditingState = false;
+		CRUD_ACTION.setStateView(false);
+		CRUD_ACTION.resetFormEditing();
+
 		$('.form__section').hide();
+		$('.table').show();
+	},
+	resetFormEditing: function(){
+		$('#input-name').val("");
+		$('#input-email').val("");
+		$('#input-address').val("");
+		$('#input-gender-1').prop('checked', true);
+
+		CRUD_ACTION.setDataEdited(null);
+	},
+	fillFormEditing: function(idWillShow){
+		CRUD_ACTION.showFormEditing();		
+
+		// filter by array that have match id
+		var datashow = jQuery.grep(CRUD_ACTION.getDatas(), function(objElement) {
+		  return objElement.id === idWillShow;
+		});
+
+		if(datashow.length > 0){
+			var data  = datashow[0];
+			$('#input-name').val(data.name);
+			$('#input-email').val(data.email);
+			$('#input-address').val(data.address);
+
+			if(data.gender === 1) $('#input-gender-1').prop('checked', true);
+			else $('#input-gender-2').prop('checked', true);
+
+			CRUD_ACTION.setDataEdited(data);
+		}
+
+		
+		return datashow;
+	},
+	confimDelete: function(id, name){		
+		swal({
+		  title: "Are you sure?",
+		  text: "Do you want to delete data '" + name + "'?",
+		  type: "warning",
+		  showCancelButton: true,
+		  confirmButtonColor: "#DD6B55",
+		  confirmButtonText: "Yes, delete it!",
+		  closeOnConfirm: false
+		},
+		function(){
+		  swal("Deleted!", "Your data has been deleted.", "success");
+		});	
+	},
+	insertListToView: function(array){
+		if(array){			
+			for(var i=0; i<array.length; i++){
+				var data = array[i];
+				var genderDisplay = data.gender === 1 ? "Male" : "Female";
+				var template = 	'<tr>'+
+								'	<td>'+ (i+1) +'</td>'+
+								'	<td>'+ data.name +'</td>'+
+								'	<td>'+ genderDisplay +'</td>'+
+								'	<td>'+ data.email +'</td>'+
+								'	<td>'+ data.address +'</td>'+
+								'	<td>'+
+								'		<button class="button button--radius button--blue" onclick="CRUD_ACTION.fillFormEditing(' + '\'' + data.id+ '\'' + ')">Edit</button>'+
+								'		<button class="button button--radius button--blue" onclick="CRUD_ACTION.confimDelete(' + '\'' + data.id+ '\'' + ', ' + '\'' + data.name+ '\'' + ')">Delete</button>'+
+								'	</td>'+
+								'</tr>';
+
+				$('.table__body').append(template);				
+			}
+		}
+	},
+	removeDataFromList: function(data){
+		if(data){
+
+		}
+	},
+	// REQUEST - RESPONSE	
+	initialData: function(){
+		if(localStorage){
+			if(localStorage.getItem('data-dummy') !== null){
+
+				var dataStore = localStorage.getItem('data-dummy');
+				var objParse = null;
+				try{
+					objParse = JSON.parse(dataStore);
+					CRUD_ACTION.setDatas(objParse);
+					CRUD_ACTION.insertListToView(objParse);
+				}catch(err){}
+
+			}else{
+				var listObj = [];
+				for(var i=0; i<10; i++){
+					var obj = {						
+						"id": "dummy-id-" + i+1,
+						"name": "Irfan Maulana",
+						"gender": 1,
+						"email": "mazipanneh@gmail.com",
+						"address": "Kemayoran"
+					}
+					listObj.push(obj);
+				}
+
+				CRUD_ACTION.setDatas(listObj);
+				CRUD_ACTION.insertListToView(listObj);
+				localStorage.setItem('data-dummy', JSON.stringify(listObj));
+			}
+		}
 	},
 	doSubmitFunction: function(event){
+		event.preventDefault();
+		swal("Submitted!", "Your data has been saved.", "success");
 
-		return isEditingState;
+		CRUD_ACTION.hideFormEditing();
 	},
 	doAddFunction: function(){
 
@@ -31,12 +160,15 @@ var CRUD_ACTION = {
 }
 
 $(document).ready(function () {   
+
+});
+
+$(window).on('load', function(){   
 	// hide form when state false 
 	if(!CRUD_ACTION.getStateView()){
 		$('.form__section').hide();
 	}
-});
 
-$(window).on('load', function(){   
-
+	// get initial data
+	CRUD_ACTION.initialData();
 });
