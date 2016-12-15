@@ -121,7 +121,9 @@ var CRUD_ACTION = {
 			
 			CRUD_ACTION.setDatas(array);
 			if(isUpdateStorage && isUpdateStorage === true){
-				localStorage.setItem('data-dummy', JSON.stringify(array));
+				try{
+					localStorage.setItem('data-dummy', JSON.stringify(array));
+				}catch(err){}
 			}			
 
 		}
@@ -132,7 +134,10 @@ var CRUD_ACTION = {
 			var datas = CRUD_ACTION.getDatas();
 			datas.push(data);
 			CRUD_ACTION.setDatas(datas);
-			localStorage.setItem('data-dummy', JSON.stringify(datas));
+			
+			try{					
+				localStorage.setItem('data-dummy', JSON.stringify(datas));
+			}catch(err){}
 
 			var genderDisplay = data.gender === 1 ? "Male" : "Female";
 			var template = 	'<tr data-id="'+ data.id +'">'+
@@ -174,6 +179,7 @@ var CRUD_ACTION = {
 		if(localStorage){
 			if(localStorage.getItem('data-dummy') !== null){
 				
+				// read from localStorage
 				try{
 					var dataStore = localStorage.getItem('data-dummy');
 					var objParse = null;
@@ -211,8 +217,10 @@ var CRUD_ACTION = {
 			// do insert data
 			var gender = $('#input-gender-1').is(":checked") === true ? 1 : 2;
 
-			var data = {					
+			var data = {	
+				// add random number as id 				
 				"id": "dummy-id-" + new Date().getTime(),
+
 				"name": $('#input-name').val(),
 				"gender": gender,
 				"email": $('#input-email').val(),
