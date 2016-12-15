@@ -121,7 +121,7 @@ var CRUD_ACTION = {
 			
 			CRUD_ACTION.setDatas(array);
 			if(isUpdateStorage && isUpdateStorage === true){
-				localStorage.setItem('data-dummy', JSON.stringify(listObj));
+				localStorage.setItem('data-dummy', JSON.stringify(array));
 			}			
 
 		}
@@ -173,10 +173,10 @@ var CRUD_ACTION = {
 	initialData: function(){
 		if(localStorage){
 			if(localStorage.getItem('data-dummy') !== null){
-
-				var dataStore = localStorage.getItem('data-dummy');
-				var objParse = null;
+				
 				try{
+					var dataStore = localStorage.getItem('data-dummy');
+					var objParse = null;
 					objParse = JSON.parse(dataStore);
 					CRUD_ACTION.insertListToView(objParse, false);
 				}catch(err){}
@@ -187,7 +187,7 @@ var CRUD_ACTION = {
 				$.get( "../json/dummy-data.json", function( data ) {
 				  	CRUD_ACTION.insertListToView(data.resultData.data, true);
 				});
-				
+
 			}
 		}
 	},
