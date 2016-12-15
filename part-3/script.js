@@ -183,23 +183,11 @@ var CRUD_ACTION = {
 
 			}else{
 
+				// Fake get method
 				$.get( "../json/dummy-data.json", function( data ) {
-				  console.log(data);
+				  	CRUD_ACTION.insertListToView(data.resultData.data, true);
 				});
-
-				var listObj = [];
-				for(var i=0; i<10; i++){
-					var obj = {						
-						"id": "dummy-id-" + i+1,
-						"name": "Irfan Maulana",
-						"gender": 1,
-						"email": "mazipanneh@gmail.com",
-						"address": "Kemayoran"
-					}
-					listObj.push(obj);
-				}
-
-				CRUD_ACTION.insertListToView(listObj, true);
+				
 			}
 		}
 	},
