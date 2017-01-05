@@ -156,18 +156,27 @@
     </div>
   </footer>
 
+
+
   <script>
-    function _trackLink(linkClick, category, action){
-        if(!category) category = 'Link';
-        if(!action) action = 'click';
-        ga('send', {
-          hitType: 'event',
-          eventCategory: category,
-          eventAction: action,
-          eventLabel: linkClick
+      function _trackLink(linkClick, category, action){
+          if(!category) category = 'Link';
+          if(!action) action = 'click';
+          ga('send', {
+            hitType: 'event',
+            eventCategory: category,
+            eventAction: action,
+            eventLabel: linkClick
+          });
+        }    
+
+        $(window).load(function(){
+          try{
+            _trackLink('demo frontend', 'demo', 'visit directly');
+          }catch(err){}
         });
-      }    
   </script>
+  
   <script src="https://use.fontawesome.com/89344806bd.js"></script>
   
 </body>

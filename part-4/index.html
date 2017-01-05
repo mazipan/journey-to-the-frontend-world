@@ -11,7 +11,9 @@
         <meta name="author" content="Irfan Maulana"/>
 
         <link rel="stylesheet" type="text/css" href="https://mazipan.github.io/awesome-bemcss/dist/awesome-bemcss.min.css">
-        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="../part-2/style.css">
+        <!-- SWEET ALERT CSS CDN -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
 
         <!-- GOOGLE ANALYTICS SCRIPT -start -->
         <script>
@@ -53,7 +55,7 @@
 		<div class="grid__row">
 			<div class="main__top-block">
 				<h3>This is table with static data</h3>		
-				<button class="button button--radius button--blue">Add New Data</button>				
+				<button class="button button--radius button--blue" onclick="CRUD_ACTION.showFormEditing()">Add New Data</button>				
 			</div>
 
 			<table class="table">
@@ -68,81 +70,16 @@
 					</tr>
 				</thead>
 				<tbody class="table__body">
-					<tr>
-						<td>1</td>
-						<td>Irfan</td>
-						<td>Male</td>
-						<td>mazipanneh@gmail.com</td>
-						<td>Kemayoran</td>
-						<td>
-							<button class="button button--radius button--blue">Edit</button>
-							<button class="button button--radius button--blue">Delete</button>
-						</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>Irfan</td>
-						<td>Male</td>
-						<td>mazipanneh@gmail.com</td>
-						<td>Kemayoran</td>
-						<td>
-							<button class="button button--radius button--blue">Edit</button>
-							<button class="button button--radius button--blue">Delete</button>
-						</td>
-					</tr>
-					<tr>
-						<td>3</td>
-						<td>Irfan</td>
-						<td>Male</td>
-						<td>mazipanneh@gmail.com</td>
-						<td>Kemayoran</td>
-						<td>
-							<button class="button button--radius button--blue">Edit</button>
-							<button class="button button--radius button--blue">Delete</button>
-						</td>
-					</tr>
-					<tr>
-						<td>4</td>
-						<td>Irfan</td>
-						<td>Male</td>
-						<td>mazipanneh@gmail.com</td>
-						<td>Kemayoran</td>
-						<td>
-							<button class="button button--radius button--blue">Edit</button>
-							<button class="button button--radius button--blue">Delete</button>
-						</td>
-					</tr>
-					<tr>
-						<td>5</td>
-						<td>Irfan</td>
-						<td>Male</td>
-						<td>mazipanneh@gmail.com</td>
-						<td>Kemayoran</td>
-						<td>
-							<button class="button button--radius button--blue">Edit</button>
-							<button class="button button--radius button--blue">Delete</button>
-						</td>
-					</tr>
-					<tr>
-						<td>6</td>
-						<td>Irfan</td>
-						<td>Male</td>
-						<td>mazipanneh@gmail.com</td>
-						<td>Kemayoran</td>
-						<td>
-							<button class="button button--radius button--blue">Edit</button>
-							<button class="button button--radius button--blue">Delete</button>
-						</td>
-					</tr>
+					<!-- DATA WILL BE HERE -->					
 				</tbody>
 			</table>	
 		</div>	
 	</section>
 
-	<section class="main__section">	
+	<section class="main__section form__section">	
 		<div class="grid__row">
 			<h3>This is our form input data</h3>
-			<form validate="validate">
+			<form class="form" validate="validate" onsubmit="CRUD_ACTION.doSubmitFunction(event)">
 				<fieldset>
 
 					<div class="form__group">		
@@ -181,8 +118,17 @@
 					<div class="form__group">
 						<div class="form__label"></div>			
 						<div class="grid__col-16">
-							<input type="submit" id="input-save" value="Save Data" class="button button--radius button--blue" />
-							<button id="input-cancel" class="button button--radius button--blue">Cancel</button>
+							<input  type="submit" 
+									id="input-save" 
+									value="Save Data" 
+									class="button button--radius button--blue" />
+
+							<a  id="input-cancel" 
+								href="javascript:void(0)" 
+								class="button button--radius button--blue" onclick="CRUD_ACTION.hideFormEditing()">
+								Cancel
+							</a>
+
 						</div>	
 					</div>		
 
@@ -244,6 +190,53 @@
 
     </div>
   </footer>
+
+  <!-- JQUERY CDN -->
+  <script 
+	  src="https://code.jquery.com/jquery-3.1.1.min.js" 
+	  type="text/javascript" 
+	  charset="utf-8" 
+	  defer></script>
+
+  <!-- FONT-AWESOME CDN -->
+  <script 
+	  src="https://use.fontawesome.com/89344806bd.js" 
+	  type="text/javascript" 
+	  charset="utf-8" 
+	  defer></script>
+
+  <!-- SWEET-ALERT CDN -->
+  <script 
+	  src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js" 
+	  type="text/javascript" 
+	  charset="utf-8" 
+	  defer></script>
+
+  <!-- CUSTOM SCRIPT -->
+  <script 
+	  src="./script.js" 
+	  type="text/javascript" 
+	  charset="utf-8" 
+	  defer></script>
+
+  <script>
+      function _trackLink(linkClick, category, action){
+          if(!category) category = 'Link';
+          if(!action) action = 'click';
+          ga('send', {
+            hitType: 'event',
+            eventCategory: category,
+            eventAction: action,
+            eventLabel: linkClick
+          });
+        }    
+
+        $(window).load(function(){
+          try{
+            _trackLink('demo frontend-world-part-4', 'demo', 'visit directly');
+          }catch(err){}
+        });
+  </script>
 
 </body>
 </html>

@@ -14,6 +14,19 @@
         <link rel="stylesheet" type="text/css" href="../part-2/style.css">
         <!-- SWEET ALERT CSS CDN -->
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+
+        <!-- GOOGLE ANALYTICS SCRIPT -start -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-25065548-2', 'auto');
+          ga('send', 'pageview');          
+        </script>
+        <!-- GOOGLE ANALYTICS SCRIPT -end -->
+
 </head>
 <body class="site">
 
@@ -205,6 +218,25 @@
 	  type="text/javascript" 
 	  charset="utf-8" 
 	  defer></script>
+
+  <script>
+      function _trackLink(linkClick, category, action){
+          if(!category) category = 'Link';
+          if(!action) action = 'click';
+          ga('send', {
+            hitType: 'event',
+            eventCategory: category,
+            eventAction: action,
+            eventLabel: linkClick
+          });
+        }    
+
+        $(window).load(function(){
+          try{
+            _trackLink('demo frontend-world-part-3', 'demo', 'visit directly');
+          }catch(err){}
+        });
+  </script>
 
 </body>
 </html>
