@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta name="robots" content="index, follow"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>Journey to the frontend world | Irfan Maulana</title>
+
+        <meta name="language" content="id-ID"/>
+        <meta name="author" content="Irfan Maulana"/>
+
+        <link rel="stylesheet" type="text/css" href="https://mazipan.github.io/awesome-bemcss/dist/awesome-bemcss.min.css">
+        <link rel="stylesheet" type="text/css" href="../part-2/style.css">
+        <!-- SWEET ALERT CSS CDN -->
+        <link rel="stylesheet" type="text/css" href="https://mazipan.github.io/library/prism.min.css">
+
+        <!-- GOOGLE ANALYTICS SCRIPT -start -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-25065548-2', 'auto');
+          ga('send', 'pageview');          
+        </script>
+        <!-- GOOGLE ANALYTICS SCRIPT -end -->
+
+</head>
+<body class="site">
+
+  <header role="header" id="header" class="site__header header">
+	  	<div class="header__wrapper">
+		  	<div class="header__brand">	          
+	          <a href="../">
+	            <img src="https://mazipan.github.io/images/irfan-maulana.jpg" alt="Irfan Maulana" title="Irfan Maulana"/>
+	          </a>
+	        </div>
+    	</div>
+  </header>
+
+  <main role="main" id="main" class="site__main main">
+
+	<section class="main__section">
+
+<pre>
+<code class="language-markup">
+// Find GANJIL - GENAP from 1 to 10
+for(var i=1; i&lt;11; i++){
+	if(i%2 === 0){
+		console.log(i + ' Genap');
+	}else{
+		console.log(i + ' Ganjil');
+	}
+}
+</code>
+</pre>
+<textarea id="ganjil-genap" class="textfield" rows="15"></textarea>
+
+
+<pre>
+<code class="language-markup">
+// Find Factorial 5!
+function faktorial(num){
+    if (num === 0)
+      { return 1; }
+    else
+      { return num * faktorial( num - 1 ); }
+}
+</code>
+</pre>
+<textarea id="factorial" class="textfield" rows="3"></textarea>
+
+
+<pre>
+<code class="language-markup">
+// Nested Loop
+print this value
+*
+**
+***
+****
+*****
+
+var x,y,chr;  
+
+for(x=1; x &lt;=6; x++){  
+
+   for (y=1; y &lt; x; y++){  
+    	chr=chr+("*");          
+   }  
+
+   console.log(chr);  
+   chr='';      
+} 
+
+</code>
+</pre>
+<textarea id="nestedloop" class="textfield" rows="3"></textarea>
+
+
+	</section>	
+	
+  </main>
+
+  <footer role="footer" class="site__footer footer" id="footer">
+    <div class="footer__wrapper">
+
+      <div class="footer__text">
+        <span>Crafted with &nbsp;<i class="fa fa-heart-o"></i>&nbsp; by Irfan Maulana</span>
+      </div>
+
+      <ul class="footer__list">
+        <li class="footer__icon">
+          <a rel="nofollow" href="https://www.facebook.com/mazipanneh">
+            <i class="fa fa-facebook-square"></i>
+          </a>
+        </li>
+        <li class="footer__icon">
+          <a rel="nofollow" href="https://twitter.com/Maz_Ipan">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </li>
+        <li class="footer__icon">
+          <a rel="nofollow" href="https://instagram.com/maz_ipan">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </li>
+        <li class="footer__icon">
+          <a rel="nofollow" href="https://id.linkedin.com/in/irfanmaulanamazipan">
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </li>
+        <li class="footer__icon">
+          <a rel="nofollow" href="https://www.slideshare.net/IrfanMaulana21">
+            <i class="fa fa-slideshare"></i>
+          </a>
+        </li>
+        <li class="footer__icon">
+          <a rel="nofollow" href="https://github.com/mazipan">
+            <i class="fa fa-github"></i>
+          </a>
+        </li>
+        <li class="footer__icon">
+          <a rel="nofollow" href="https://mazipanneh.wordpress.com/">
+            <i class="fa fa-wordpress"></i>
+          </a>
+        </li>
+      </ul>
+
+      <div class="footer__text">
+        <span>Copyright © 2016</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JQUERY CDN -->
+  <script 
+	  src="https://code.jquery.com/jquery-3.1.1.min.js" 
+	  type="text/javascript" 
+	  charset="utf-8" 
+	  defer></script>
+
+  <!-- FONT-AWESOME CDN -->
+  <script 
+	  src="https://use.fontawesome.com/89344806bd.js" 
+	  type="text/javascript" 
+	  charset="utf-8" 
+	  defer></script>
+
+
+  <!-- PRISM LIBRARY -->
+  <script 
+	  src="https://mazipan.github.io/library/prism.min.js" 
+	  type="text/javascript" 
+	  charset="utf-8" 
+	  defer></script>
+
+  <script>
+      function _trackLink(linkClick, category, action){
+          if(!category) category = 'Link';
+          if(!action) action = 'click';
+          ga('send', {
+            hitType: 'event',
+            eventCategory: category,
+            eventAction: action,
+            eventLabel: linkClick
+          });
+        }    
+
+        window.onload(function(){
+          try{
+            _trackLink('demo frontend-world-part-3', 'demo', 'visit directly');
+          }catch(err){}
+        });
+  </script>
+  <script>
+  	var printGanjilGenap = "";
+  	printGanjilGenap += 'Ganjil - Genap \n';
+  	for(var i=1; i<11; i++){
+		if(i%2 === 0){
+  			printGanjilGenap += i + ' Genap \n';
+		}else{
+  			printGanjilGenap += i + ' Ganjil \n';
+		}
+	}
+	document.getElementById('ganjil-genap').value = printGanjilGenap;
+  </script>
+  <script>
+
+  	var printFaktorial = "";
+  	printFaktorial += 'Faktorial 5! ';
+  	function faktorial(num){
+	    if (num === 0)
+	      { return 1; }
+	    else
+	      { return num * faktorial( num - 1 ); }
+	}
+	printFaktorial += "= " + faktorial(5);
+  	
+	document.getElementById('factorial').value = printFaktorial;
+  </script>
+  <script>
+  	var x,y,chr; 
+  	for(x=1; x &lt;=6; x++){  
+
+	   for (y=1; y &lt; x; y++){  
+	    	chr=chr+("*");          
+	   }  
+
+	   console.log(chr);  
+	   chr='';      
+	} 
+  </script>
+
+</body>
+</html>
