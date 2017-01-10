@@ -55,7 +55,7 @@
 		<div class="grid__row">
 			<div class="main__top-block">
 				<h3>This is table with static data</h3>		
-				<button class="button button--radius button--blue" onclick="CRUD_ACTION.showFormEditing()">Add New Data</button>				
+				<button class="button button--radius button--blue" onclick="INTERACTION.showFormEditing()">Add New Data</button>				
 			</div>
 
 			<table class="table">
@@ -79,7 +79,7 @@
 	<section class="main__section form__section">	
 		<div class="grid__row">
 			<h3>This is our form input data</h3>
-			<form class="form" validate="validate" onsubmit="CRUD_ACTION.doSubmitFunction(event)">
+			<form class="form" validate="validate" onsubmit="REQUST_RESPONSE.doSubmitFunction(event)">
 				<fieldset>
 
 					<div class="form__group">		
@@ -125,7 +125,7 @@
 
 							<a  id="input-cancel" 
 								href="javascript:void(0)" 
-								class="button button--radius button--blue" onclick="CRUD_ACTION.hideFormEditing()">
+								class="button button--radius button--blue" onclick="INTERACTION.hideFormEditing()">
 								Cancel
 							</a>
 
@@ -214,7 +214,7 @@
 
   <!-- CUSTOM SCRIPT -->
   <script 
-	  src="./script.js" 
+	  src="./script-closure.js" 
 	  type="text/javascript" 
 	  charset="utf-8" 
 	  defer></script>
@@ -231,11 +231,11 @@
           });
         }    
 
-        $(window).load(function(){
+        window.onload = function(){
           try{
             _trackLink('demo frontend-world-part-3', 'demo', 'visit directly');
           }catch(err){}
-        });
+        };
   </script>
 
 </body>

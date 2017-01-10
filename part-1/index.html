@@ -158,5 +158,24 @@
 	<span>Copyright © 2016</span>
   </footer>
 
+  <script>
+      function _trackLink(linkClick, category, action){
+          if(!category) category = 'Link';
+          if(!action) action = 'click';
+          ga('send', {
+            hitType: 'event',
+            eventCategory: category,
+            eventAction: action,
+            eventLabel: linkClick
+          });
+        }    
+
+        window.onload = function(){
+          try{
+            _trackLink('demo frontend-world-part-1', 'demo', 'visit directly');
+          }catch(err){}
+        };
+  </script>
+
 </body>
 </html>

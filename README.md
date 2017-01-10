@@ -22,7 +22,12 @@ In the end of part we will build a real combination from our three first entity 
 - <b>Part 3 : The Machine</b>
   + Description : This part will introduce newbies about basic Javascript
   + Slide : <a href="http://www.slideshare.net/IrfanMaulana21/journey-to-the-front-end-world-part3-the-machine-70691627">http://www.slideshare.net/IrfanMaulana21/journey-to-the-front-end-world-part3-the-machine-70691627</a>
-  + Demo Page : <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-3/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-3/index.html</a>
+  + Demo Page : 
+  <br/>
+  <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-3/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-3/js-simple-logic.html</a>
+  <br/>
+  <a href="https://mazipan.github.io/journey-to-the-frontend-world/part-3/index.html">https://mazipan.github.io/journey-to-the-frontend-world/part-3/index.html</a>
+
 - <b>Part 4 : The Baby</b>
   + Description : under development
   + Slide : under development

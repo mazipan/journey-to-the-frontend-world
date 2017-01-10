@@ -91,6 +91,12 @@
               <li>
                   <a href="./part-3/index.html" 
                   onclick="_trackLink('demo frontend-world-part-3', 'demo', 'visit')">
+                    Part 3 - JS SIMPLE LOGIC
+                  </a>
+              </li>
+              <li>
+                  <a href="./part-3/index.html" 
+                  onclick="_trackLink('demo frontend-world-part-3', 'demo', 'visit')">
                     Part 3 - The Machine
                   </a>
               </li>
@@ -170,11 +176,11 @@
           });
         }    
 
-        $(window).load(function(){
+        window.onload = function(){
           try{
             _trackLink('demo frontend', 'demo', 'visit directly');
           }catch(err){}
-        });
+        };
   </script>
   
   <script src="https://use.fontawesome.com/89344806bd.js"></script>

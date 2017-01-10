@@ -245,5 +245,23 @@
     </div>
   </footer>
 
+  <script>
+      function _trackLink(linkClick, category, action){
+          if(!category) category = 'Link';
+          if(!action) action = 'click';
+          ga('send', {
+            hitType: 'event',
+            eventCategory: category,
+            eventAction: action,
+            eventLabel: linkClick
+          });
+        }    
+
+        window.onload = function(){
+          try{
+            _trackLink('demo frontend-world-part-2', 'demo', 'visit directly');
+          }catch(err){}
+        };
+  </script>
 </body>
 </html>

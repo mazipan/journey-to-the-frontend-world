@@ -1,45 +1,50 @@
-var CRUD_ACTION = {
-	// IN MEMORY STATE VARIABEL
-	datas: [],
-	dataEdited: {},
-	isEditingState: false,
+var STATE = (function() {
+  var datas= [];
+  var dataEdited= {};
+  var isEditingState= false;
 
+  return {
 	// GETTER - SETTER
 	getDatas: function(){
-		return CRUD_ACTION.datas;
+		return STATE.datas;
 	},
 
 	setDatas: function(datas){
-		return CRUD_ACTION.datas = datas;
+		return STATE.datas = datas;
 	},
 
 	getDataEdited: function(){
-		return CRUD_ACTION.dataEdited;
+		return STATE.dataEdited;
 	},
 
 	setDataEdited: function(dataEdited){
-		return CRUD_ACTION.dataEdited = dataEdited;
+		return STATE.dataEdited = dataEdited;
 	},
 
 	getStateView: function(){
-		return CRUD_ACTION.isEditingState;
+		return STATE.isEditingState;
 	},
 
 	setStateView: function(isEditingState){
-		return CRUD_ACTION.isEditingState = isEditingState;
-	},
+		return STATE.isEditingState = isEditingState;
+	}
+  };   
+})();
 
-	// UI INTERACTION
+var INTERACTION = (function() {
+
+  return {
+    // UI INTERACTION
 	showFormEditing: function(){
-		CRUD_ACTION.resetFormEditing();
+		INTERACTION.resetFormEditing();
 
 		$('.table').hide();
 		$('.form__section').show();
 	},
 
 	hideFormEditing: function(){
-		CRUD_ACTION.setStateView(false);
-		CRUD_ACTION.resetFormEditing();
+		STATE.setStateView(false);
+		INTERACTION.resetFormEditing();
 
 		$('.form__section').hide();
 		$('.table').show();
@@ -51,15 +56,15 @@ var CRUD_ACTION = {
 		$('#input-address').val("");
 		$('#input-gender-1').prop('checked', true);
 
-		CRUD_ACTION.setDataEdited(null);
+		STATE.setDataEdited(null);
 	},
 
 	fillFormEditing: function(idWillShow){
-		CRUD_ACTION.setStateView(true);
-		CRUD_ACTION.showFormEditing();		
+		STATE.setStateView(true);
+		INTERACTION.showFormEditing();		
 
 		// filter by array that have match id
-		var datashow = jQuery.grep(CRUD_ACTION.getDatas(), function(objElement) {
+		var datashow = jQuery.grep(STATE.getDatas(), function(objElement) {
 		  return objElement.id === idWillShow;
 		});
 
@@ -72,7 +77,7 @@ var CRUD_ACTION = {
 			if(data.gender === 1) $('#input-gender-1').prop('checked', true);
 			else $('#input-gender-2').prop('checked', true);
 
-			CRUD_ACTION.setDataEdited(data);
+			STATE.setDataEdited(data);
 		}
 
 		
@@ -90,10 +95,10 @@ var CRUD_ACTION = {
 		  closeOnConfirm: false
 		},
 		function(){
-			var datashow = jQuery.grep(CRUD_ACTION.getDatas(), function(objElement) {
+			var datashow = jQuery.grep(STATE.getDatas(), function(objElement) {
 			  return objElement.id !== id;
 			});
-			CRUD_ACTION.insertListToView(datashow, true);
+			INTERACTION.insertListToView(datashow, true);
 		  	swal("Deleted!", "Your data has been deleted.", "success");
 		});	
 	},
@@ -111,15 +116,15 @@ var CRUD_ACTION = {
 								'	<td>'+ data.email +'</td>'+
 								'	<td>'+ data.address +'</td>'+
 								'	<td>'+
-								'		<button class="button button--radius button--blue" onclick="CRUD_ACTION.fillFormEditing(' + '\'' + data.id+ '\'' + ')">Edit</button>'+
-								'		<button class="button button--radius button--blue" onclick="CRUD_ACTION.confimDelete(' + '\'' + data.id+ '\'' + ', ' + '\'' + data.name+ '\'' + ')">Delete</button>'+
+								'		<button class="button button--radius button--blue" onclick="INTERACTION.fillFormEditing(' + '\'' + data.id+ '\'' + ')">Edit</button>'+
+								'		<button class="button button--radius button--blue" onclick="INTERACTION.confimDelete(' + '\'' + data.id+ '\'' + ', ' + '\'' + data.name+ '\'' + ')">Delete</button>'+
 								'	</td>'+
 								'</tr>';
 
 				$('.table__body').append(template);				
 			}
 			
-			CRUD_ACTION.setDatas(array);
+			STATE.setDatas(array);
 			if(isUpdateStorage && isUpdateStorage === true){
 				try{
 					localStorage.setItem('data-dummy', JSON.stringify(array));
@@ -131,9 +136,9 @@ var CRUD_ACTION = {
 
 	addDataToList: function(data){
 		if(data){
-			var datas = CRUD_ACTION.getDatas();
+			var datas = STATE.getDatas();
 			datas.push(data);
-			CRUD_ACTION.setDatas(datas);
+			STATE.setDatas(datas);
 			
 			try{					
 				localStorage.setItem('data-dummy', JSON.stringify(datas));
@@ -147,8 +152,8 @@ var CRUD_ACTION = {
 							'	<td>'+ data.email +'</td>'+
 							'	<td>'+ data.address +'</td>'+
 							'	<td>'+
-							'		<button class="button button--radius button--blue" onclick="CRUD_ACTION.fillFormEditing(' + '\'' + data.id+ '\'' + ')">Edit</button>'+
-							'		<button class="button button--radius button--blue" onclick="CRUD_ACTION.confimDelete(' + '\'' + data.id+ '\'' + ', ' + '\'' + data.name+ '\'' + ')">Delete</button>'+
+							'		<button class="button button--radius button--blue" onclick="INTERACTION.fillFormEditing(' + '\'' + data.id+ '\'' + ')">Edit</button>'+
+							'		<button class="button button--radius button--blue" onclick="INTERACTION.confimDelete(' + '\'' + data.id+ '\'' + ', ' + '\'' + data.name+ '\'' + ')">Delete</button>'+
 							'	</td>'+
 							'</tr>';
 
@@ -159,7 +164,7 @@ var CRUD_ACTION = {
 
 	updateDataInList: function(data){
 		if(data){
-			var datas = CRUD_ACTION.getDatas();
+			var datas = STATE.getDatas();
 			var dataTemp = [];
 			for(var i=0; i<datas.length; i++){
 				var dataItem = datas[i];
@@ -170,11 +175,17 @@ var CRUD_ACTION = {
 				dataTemp.push(dataItem);
 			}
 
-			CRUD_ACTION.insertListToView(dataTemp);			
+			INTERACTION.insertListToView(dataTemp);			
 		}
 	},
 
-	// REQUEST - RESPONSE	
+  };   
+})();
+
+var REQUST_RESPONSE = (function() {
+
+  return {
+  	// REQUEST - RESPONSE	
 	initialData: function(){
 		if(localStorage){
 			if(localStorage.getItem('data-dummy') !== null){
@@ -184,14 +195,15 @@ var CRUD_ACTION = {
 					var dataStore = localStorage.getItem('data-dummy');
 					var objParse = null;
 					objParse = JSON.parse(dataStore);
-					CRUD_ACTION.insertListToView(objParse, false);
+					INTERACTION.insertListToView(objParse, false);
 				}catch(err){}
 
 			}else{
 
-				// Fake get method
+				// Fake get method 
+				// NOT WORK IN LOCAL
 				$.get( "../json/dummy-data.json", function( data ) {
-				  	CRUD_ACTION.insertListToView(data.resultData.data, true);
+				  	INTERACTION.insertListToView(data.resultData.data, true);
 				});
 
 			}
@@ -201,17 +213,17 @@ var CRUD_ACTION = {
 	doSubmitFunction: function(event){
 		event.preventDefault();
 
-		if(CRUD_ACTION.getStateView()){
+		if(STATE.getStateView()){
 			// do update data
 			var gender = $('#input-gender-1').is(":checked") === true ? 1 : 2;
 
-			var data = CRUD_ACTION.getDataEdited();
+			var data = STATE.getDataEdited();
 			data.name = $('#input-name').val();
 			data.gender = gender;
 			data.email = $('#input-email').val();
 			data.address = $('#input-address').val();
 
-			CRUD_ACTION.updateDataInList(data);
+			INTERACTION.updateDataInList(data);
 
 		}else{
 			// do insert data
@@ -227,25 +239,22 @@ var CRUD_ACTION = {
 				"address": $('#input-address').val()
 			}
 
-			CRUD_ACTION.addDataToList(data);
+			INTERACTION.addDataToList(data);
 
 
 		}
 		swal("Submitted!", "Your data has been saved.", "success");
 
-		CRUD_ACTION.hideFormEditing();
+		INTERACTION.hideFormEditing();
 	}
-}
-
-$(document).ready(function () {   
-
-});
+  };   
+})();
 
 $(window).on('load', function(){   
 	// hide form when state false 
-	if(!CRUD_ACTION.getStateView()){
+	if(!STATE.getStateView()){
 		$('.form__section').hide();
 	}
 	// get initial data
-	CRUD_ACTION.initialData();
+	REQUST_RESPONSE.initialData();
 });
