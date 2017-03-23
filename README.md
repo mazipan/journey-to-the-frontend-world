@@ -26,7 +26,7 @@ In the end of part we will build a real combination from our three first entity 
   + Slide : [See here](http://www.slideshare.net/IrfanMaulana21/journey-to-the-front-end-world-part3-the-machine-70691627)
   + Demo Page : [See here](https://mazipan.github.io/journey-to-the-frontend-world/part-3/js-simple-logic.html) AND [See here](https://mazipan.github.io/journey-to-the-frontend-world/part-3/index.html)
 
-- <b>Part 4 : The Baby</b>
+### Part 4 : The Baby
   + Description : under development
   + Slide : under development
   + Demo Page : [See here](https://mazipan.github.io/journey-to-the-frontend-world/part-4/index.html)
