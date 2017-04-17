@@ -2,6 +2,11 @@
 This is repository for every new comer in frontend world.
 
 ![Frontend Journey](http://blog.debugme.eu/wp-content/uploads/2016/01/great-frontend.png)
+[![License](https://img.shields.io/github/license/mazipan/journey-to-the-frontend-world.svg?maxAge=3600)](https://github.com/mazipan/journey-to-the-frontend-world) 
+[![Github Issue](https://img.shields.io/github/issues/mazipan/journey-to-the-frontend-world.svg?maxAge=3600)](https://github.com/mazipan/journey-to-the-frontend-world/issues) 
+[![GitHub Fork](https://img.shields.io/github/forks/mazipan/journey-to-the-frontend-world.svg?maxAge=3600)](https://github.com/mazipan/journey-to-the-frontend-world/network) 
+[![GitHub Star](https://img.shields.io/github/stars/mazipan/journey-to-the-frontend-world.svg?maxAge=3600)](https://github.com/mazipan/journey-to-the-frontend-world/stargazers) 
+[![GitHub Contributors](https://img.shields.io/github/contributors/mazipan/journey-to-the-frontend-world.svg?maxAge=3600)](https://github.com/mazipan/journey-to-the-frontend-world/network/members)
 
 Here I will seperate into 4 part that in every part we will learn about one entity in frontend.
 In the end of part we will build a real combination from our three first entity that we learned before.
